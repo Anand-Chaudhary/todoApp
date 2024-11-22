@@ -5,7 +5,7 @@ import './App.css'
 import Input from './component/Input/Input'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todo, setTodo] = useState([]);
 
   return (
     <>
