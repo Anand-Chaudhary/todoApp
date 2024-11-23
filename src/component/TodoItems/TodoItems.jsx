@@ -1,24 +1,15 @@
 import React, { useState } from 'react'
 
 const TodoItems = ({ todos }) => {
-  // const [checked, setChecked] = useState(false)
-  // const bgChange = () =>{
-  //   const input  = document.querySelector('input');
-  //   input.addEventListener('click', ()=>{
-  //     setChecked(true)
-  //     input.classList.remove('bg-white');
-  //     console.log("HI");
-  //   })
-  // }
+  const [color, setColor] = useState("white");
+
   return (
     <div className='p-5'>
       <ul className='flex flex-col'>
       {todos.map((task, index) => (
-        <li key={index} className="py-1 felx justify-start text-black bg-white w-full m-5 p-5 ">
+        <li key={index} className="py-1 felx justify-start text-black w-full m-5 p-5" style={{backgroundColor: color}} >
           <input type="checkbox" 
-          // checked = {false}
-          // onChange={bgChange}
-          // setChecked = {true}
+            onChange={()=>{setColor("#90EE90")}}
           />
           {task}
         </li>
