@@ -20,7 +20,7 @@ function App() {
   }, [todo])
 
   const addTodo = (task) => {
-    setTodo([...todo, task]);
+    setTodo([task, ...todo]);
   };
   
   return (

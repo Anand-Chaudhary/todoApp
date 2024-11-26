@@ -9,7 +9,10 @@ const TodoItems = ({ todos }) => {
       {todos.map((task, index) => (
         <li key={index} className="py-1 felx justify-start text-black w-full m-5 p-5" style={{backgroundColor: color}} >
           <input type="checkbox" 
-            onChange={()=>{setColor("#90EE90")}}
+            onChange={(e)=>{
+              setColor("#90EE90");
+              e.preventDefault();
+            }}
           />
           {task}
         </li>
