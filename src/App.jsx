@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Input from './component/Input/Input'
 import TodoItems from './component/TodoItems/TodoItems'
@@ -8,6 +6,7 @@ import TodoItems from './component/TodoItems/TodoItems'
 function App() {
   const [todo, setTodo] = useState(() => {
     const savedTodos = localStorage.getItem("todo");
+    // localStorage.clear()
     if (savedTodos) {
       return JSON.parse(savedTodos);
     } else {

@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 
 const TodoItems = ({ todos }) => {
-  const [color, setColor] = useState("white");
-
+  const [index, setindex] = useState(0);
+  const moveToEnd = (index) =>{
+    setindex(index+1);
+  }
   return (
     <div className='p-5'>
       <ul className='flex flex-col'>
       {todos.map((task, index) => (
-        <li key={index} className="py-1 felx justify-start text-black w-full m-5 p-5" style={{backgroundColor: color}} >
-          <input type="checkbox" 
-            onChange={(e)=>{
-              setColor("#90EE90");
-              e.preventDefault();
-            }}
+        <li key={index} className="py-1 felx justify-start text-black w-full m-5 p-5 bg-white" >
+          <input type="checkbox"
+            onChange={()=>{moveToEnd}}
           />
           {task}
         </li>
